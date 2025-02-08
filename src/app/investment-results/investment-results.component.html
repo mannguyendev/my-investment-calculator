@@ -1,0 +1,19 @@
+<table>
+  <tr>
+    <th>Year</th>
+    <th>Investment Value</th>
+    <th>Interest (Year)</th>
+    <th>Total interest</th>
+    <th>Interest Capital</th>
+  </tr>
+
+  @for (annualData of investmentResults; track annualData.year) {
+  <tr>
+    <td>{{ annualData.year }}</td>
+    <td>${{ annualData.valueEndOfYear | number : "1.2-2" }}</td>
+    <td>${{ annualData.interest | number : "1.2-2" }}</td>
+    <td>${{ annualData.totalInterest | number : "1.2-2" }}</td>
+    <td>${{ annualData.totalAmountInvested | number : "1.2-2" }}</td>
+  </tr>
+  }
+</table>

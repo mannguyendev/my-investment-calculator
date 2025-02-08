@@ -2,8 +2,15 @@
 // e.g., integrate it into a service or component
 // You may need to tweak it, depending on where and how you use it
 
-function calculateInvestmentResults() {
-  const annualData = [];
+import { AnnualDataModel } from './app/investment-results/annual-data.model';
+
+export function calculateInvestmentResults(
+  initialInvestment: number,
+  annualInvestment: number,
+  expectedReturn: number,
+  duration: number
+) {
+  const annualData: AnnualDataModel[] = [];
   let investmentValue = initialInvestment;
 
   for (let i = 0; i < duration; i++) {
