@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { AnnualDataModel } from './annual-data.model';
+import { Component, input } from '@angular/core';
+import { AnnualDataModel } from './investment-results.model';
 import { CommonModule } from '@angular/common';
 
 @Component({
@@ -10,5 +10,5 @@ import { CommonModule } from '@angular/common';
   styleUrl: './investment-results.component.css',
 })
 export class InvestmentResultsComponent {
-  @Input({ required: true }) investmentResults: AnnualDataModel[] = [];
+  results = input<AnnualDataModel[] | undefined>();
 }

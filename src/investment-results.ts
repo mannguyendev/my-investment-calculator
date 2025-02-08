@@ -2,7 +2,7 @@
 // e.g., integrate it into a service or component
 // You may need to tweak it, depending on where and how you use it
 
-import { AnnualDataModel } from './app/investment-results/annual-data.model';
+import { AnnualDataModel } from './app/investment-results/investment-results.model';
 
 export function calculateInvestmentResults(
   initialInvestment: number,
